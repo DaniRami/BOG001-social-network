@@ -3,9 +3,9 @@ const auth = () => {
   return {
     signInWithEmailAndPassword: (email, pass) => {
       return new Promise((resolve, reject) => {
-       if ({ title: "Bienvenido", message: "Ingresaste con correo eletronico" } ){
+       if ({ title: "Bienvenido", message: "Ingresaste con correo eletronico" }){
         setTimeout(() => {
-               resolve("Bienvenido");
+               resolve("ingresaste con correo");
        },2000) 
       } else if("Por favor introduce un correo válido"){
       reject( error )
