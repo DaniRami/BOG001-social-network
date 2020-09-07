@@ -2,7 +2,7 @@ export const loginWithEmail = async (email, password) => {
   try {
     await firebase.auth().signInWithEmailAndPassword(email, password);
      return { title: "Bienvenido", message: "Ingresaste con correo eletronico" };
-    return "bienvenido";
+     
   } catch (error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -50,10 +50,10 @@ export const loginGoogle = async () => {
 
     if (errorCode === "auth/account-exists-with-different-credential") {
       message = "Error ya te encuentras registado con correo eletronico";
-      // return "error ya te encuentras registado con correo eletronico";
+       
     } else if (errorCode == "auth / popup-closed-by-user") {
       message = "Error no terminaste de hacer el login con google";
-      // return "Error no terminaste de hacer el login con google";
+       
     }
     return { status: false, title: "Error", message };
   }

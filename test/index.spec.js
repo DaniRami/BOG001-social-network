@@ -12,7 +12,7 @@ describe("loginWithEmail", () => {
 
   it("deberia poder iniciar seccion con correo:dora@gmail.com y contraseña:123456789", () => {
     return loginWithEmail("dora@gmail.com", "123456789").then((data) => {
-      expect(data).toBe("bienvenido");
+      expect(data).toEqual( { title: "Bienvenido", message: "Ingresaste con correo eletronico" });
     });
   });
 
