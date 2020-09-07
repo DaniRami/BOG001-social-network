@@ -1,18 +1,31 @@
 const auth = () => {
+  debugger
   return {
     signInWithEmailAndPassword: (email, pass) => {
       return new Promise((resolve, reject) => {
-        (true)
-          ? setTimeout(() => resolve("bienvenido"), 2000)
-          : reject( new error("Por favor introduce un correo válido") ||  ("error contraseña incorrecta"));
-
-        return {
+       if (bienvenido){
+        setTimeout(() => {
+               resolve("bienvenido");
+       },2000) 
+      } else if("Por favor introduce un correo válido"){
+      reject( error )
+         
+      } else if("error contraseña incorrecta") {
+      reject(error)
+      }
+      return {
           signInWithPopup: (provaider) => {
             return new Promise((resolve, reject) => {
-              (true)
-                ? setTimeout(() => resolve("object"), 2000)
-                : reject( new error("error no terminaste de hacer el login con google") || ("error ya te encuentras registado con correo eletronico"))
-           });
+             if (object){
+              setTimeout(() =>{
+                resolve("object")
+              } , 2000)
+             } else if("Error ya te encuentras registado con correo eletronico"){
+                reject(error)
+             } else if("Error no terminaste de hacer el login con google"){
+               reject(error)
+             }
+            });
           },
         };
       });

@@ -2,7 +2,7 @@ export const loginWithEmail = async (email, password) => {
   try {
     await firebase.auth().signInWithEmailAndPassword(email, password);
      return { title: "Bienvenido", message: "Ingresaste con correo eletronico" };
-    // return "bienvenido";
+    return "bienvenido";
   } catch (error) {
     var errorCode = error.code;
     var errorMessage = error.message;

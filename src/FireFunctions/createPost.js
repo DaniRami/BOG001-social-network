@@ -30,7 +30,7 @@ export const paintpost = async () => {
   for(const doc of allposts.docs){
     console.log(doc.id, '=>', doc.data());
   }
-  return allposts
+  return allposts;
  } catch (error) {
    
  }
