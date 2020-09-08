@@ -2,6 +2,7 @@
 ## <img src="src/img/Captura.PNG" width=600> 
 
 ## Investigacion de usuario
+
 Hicimos una encuesta virtual para conocer las expectativas y necesidades de nuestros potenciales usuarios con los siguientes hallazgos:
 
 1. Nuestros encuestados estuvieron principalmente en el rango de edad entre 21 y 27 años, sin embargo, hubo participantes de hasta 59 años.
