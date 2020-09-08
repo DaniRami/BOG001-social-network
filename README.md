@@ -27,7 +27,9 @@ H3: Yo como desarrollador quiero poder dar y recibir likes en los post.
 ## Prototipo de alta
 
 Desko (https://www.figma.com/file/iCbkiRTP1h4rOpnPFsmony/Social-Network-TechMe?node-id=1%3A50)
+
 Movil (https://www.figma.com/file/iCbkiRTP1h4rOpnPFsmony/Social-Network-TechMe?node-id=0%3A1)
+
 Movil (https://www.figma.com/file/iCbkiRTP1h4rOpnPFsmony/Social-Network-TechMe?node-id=1%3A100)
 
 ### HTML y CSS
