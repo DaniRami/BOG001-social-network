@@ -16,7 +16,7 @@ const auth = () => {
         return {
           signInWithPopup: (provider) => {
             return new Promise((resolve, reject) => {
-              if ({status: true,title: "Bienvenido", message: "Ingresaste con google"}) {
+              if ({status: true, title: "Bienvenido", message: "Ingresaste con google",}) {
                 setTimeout(() => {
                   resolve("ingresaste con google");
                 }, 2000);
