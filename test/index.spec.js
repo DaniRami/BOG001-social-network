@@ -12,19 +12,19 @@ describe("loginWithEmail", () => {
 
   it("deberia poder iniciar seccion con correo:dora@gmail.com y contraseña:123456789", () => {
     return loginWithEmail("dora@gmail.com", "123456789").then((data) => {
-      expect(data).toEqual( { title: "Bienvenido", message: "Ingresaste con correo eletronico" });
+      expect(data).toEqual({title: "Bienvenido", message: "Ingresaste con correo eletronico"});
     });
   });
 
   it("deberia dar un error para este correo", () => {
     return loginWithEmail("dora.gmail.com").catch((error) => {
-      expect(error).toBe("Por favor introduce un correo válido");
+      expect(error).toBe("correo incorrecto");
     });
   });
 
   it("deberia dar un error para este contraseña", () => {
     return loginWithEmail("1234").catch((error) => {
-      expect(error).toBe("error contraseña incorrecta");
+      expect(error).toBe("contraseña incorrecta");
     });
   });
 });
@@ -34,28 +34,19 @@ describe("loginGoogle", () => {
     expect(typeof loginGoogle).toBe("function");
   });
 
-  it("deberia recibir un oject de respuesta exitosa  del provaider al iniciar seccion con google", () => {
-    return loginGoogle("provaider").then(() => {
-      const result = [
-        "client_id",
-        "response_type",
-        "scope",
-        "redirect_uri",
-        "state",
-      ];
-      expect(typeof result).toBe("object");
+  it("deberia recibir un objeto de respuesta exitosa  del provaider al iniciar seccion con google", () => {
+    return loginGoogle("provider").then((data) => {
+      expect(data).toEqual({status: true, title: "Bienvenido", message: "Ingresaste con google"});
     });
   });
   it("deberia salir un error cuando no termino de hacer el login con google", () => {
     return loginGoogle("provaider").catch((error) => {
-      expect(error).toBe("error no terminaste de hacer el login con google");
+      expect(error).toBe("ya esta registrado este correo con email");
     });
   });
   it("deberia salir un error cuando ya estas logeado con email y password", () => {
     return loginGoogle("provaider").catch((error) => {
-      expect(error).toBe(
-        "error ya te encuentras registado con correo eletronico"
-      );
+      expect(error).toBe("no terminaste de ingresar con google");
     });
   });
-});
+  });

@@ -7,23 +7,23 @@ const auth = () => {
         setTimeout(() => {
                resolve("ingresaste con correo");
        },2000) 
-      } else if("Por favor introduce un correo válido"){
-      reject( error )
+      } else if(errorCode == "auth/invalid-email"){
+      reject(new error("correo incorrecto"))
          
-      } else if("error contraseña incorrecta") {
-      reject(error)
+      } else if(errorCode == "auth/wrong-password") {
+      reject(new error ("contraseña incorrecta"))
       }
       return {
-          signInWithPopup: (provaider) => {
+          signInWithPopup: (provider) => {
             return new Promise((resolve, reject) => {
-             if (object){
+             if ({status: true, title: "Bienvenido", message: "Ingresaste con google"}){
               setTimeout(() =>{
-                resolve("object")
+                resolve("ingresaste con google")
               } , 2000)
-             } else if("Error ya te encuentras registado con correo eletronico"){
-                reject(error)
-             } else if("Error no terminaste de hacer el login con google"){
-               reject(error)
+             } else if(errorCode === "auth/account-exists-with-different-credential"){
+              reject(new error("ya esta registrado este correo con email y password"))
+             } else if(errorCode == "auth / popup-closed-by-user"){
+              reject(new error("no terminaste de ingresar con google"))
              }
             });
           },

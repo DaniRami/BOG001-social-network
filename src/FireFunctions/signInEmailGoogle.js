@@ -33,11 +33,7 @@ export const loginGoogle = async () => {
     var user = provider.user;
     console.log(user);
     console.log(token);
-    return {
-      status: true,
-      title: "Bienvenido",
-      message: "Ingresaste con google",
-    };
+    return {status: true, title: "Bienvenido", message: "Ingresaste con google"};
   } catch (error) {
     var errorCode = error.code;
     var errorMessage = error.message;
