@@ -18,9 +18,16 @@ Link de Estadisticas de nuestra investigacion de usuario:
 (https://docs.google.com/forms/d/1AdlquL3H6ODTbu2L1OTn45QjNINwM3KZGgaMESAnU2o/edit#responses)
 
 ## Historias de usuario
-H1: Yo como desarrollador quiero poderme loguear en la red social de desarrolladores TechMe.
-H2: Yo como desarrollador quiero poder hacer publicaciones en el muro de la red social.
-H3: Yo como desarrollador quiero poder dar y recibir likes en los post.
+H1: Yo como desarrollador quiero poderme loguear en la red social de desarrolladores TechMe (quiero loguearme con correo y contraseña y con google).
+
+
+H4. Yo como desarrollador quiero registrarme en la red social de desarrolladores Techme(correo y contraseña).
+
+
+H3: Yo como desarrollador quiero poder hacer publicaciones en el muro de la red social.
+
+
+H4: Yo como desarrollador quiero poder dar y recibir likes en los post.
 
 ## Prototipo de baja
 
