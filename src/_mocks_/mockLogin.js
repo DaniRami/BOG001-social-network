@@ -5,7 +5,7 @@ const auth = () => {
         if ({ title: "Bienvenido", message: "Ingresaste con correo eletronico" }) {
           setTimeout(() => {
             resolve("ingresaste con correo");
-          }, 2000);
+          }, 3000);
         } else if (errorCode == "auth/invalid-email") {
           reject(new error("correo incorrecto"));
         } else if (errorCode == "auth/wrong-password") {
@@ -16,10 +16,10 @@ const auth = () => {
         return {
           signInWithPopup: (provider) => {
             return new Promise((resolve, reject) => {
-              if ({status: true, title: "Bienvenido", message: "Ingresaste con google",}) {
+              if ({}) {
                 setTimeout(() => {
                   resolve("ingresaste con google");
-                }, 2000);
+                }, 3000);
               } else if (errorCode === "auth/account-exists-with-different-credential") {
                 reject(new error("ya esta registrado este correo con email y password"));
               } else if (errorCode == "auth / popup-closed-by-user") {

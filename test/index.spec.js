@@ -41,7 +41,7 @@ describe("loginGoogle", () => {
 
   it("deberia recibir un objeto de respuesta exitosa  del provaider al iniciar seccion con google", () => {
     return loginGoogle().then((data) => {
-    expect(data).toBe({status: true, title: "Bienvenido", message: "Ingresaste con google"});
+    expect(data).toEqual({});
     });
   });
   it("deberia salir un error cuando no termino de hacer el login con google", () => {

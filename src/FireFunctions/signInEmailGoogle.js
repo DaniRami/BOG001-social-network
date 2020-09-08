@@ -29,8 +29,8 @@ export const loginGoogle = async () => {
     var provider = await new firebase.auth.GoogleAuthProvider();
     provider.addScope("https://www.googleapis.com/auth/userinfo.email");
     await firebase.auth().signInWithPopup(provider);
-    var token = provider.credential.accessToken;
-    var user = provider.user;
+    var token = await provider.credential.accessToken;
+    var user =  await provider.user;
     console.log(user);
     console.log(token);
     return {status: true, title: "Bienvenido", message: "Ingresaste con google"};
@@ -45,12 +45,14 @@ export const loginGoogle = async () => {
     console.log(credential);
 
     if (errorCode === "auth/account-exists-with-different-credential") {
-      message = "Error ya te encuentras registado con correo eletronico";
+      
+      message = " ya te encuentras registado con correo eletronico";
        
     } else if (errorCode == "auth / popup-closed-by-user") {
-      message = "Error no terminaste de hacer el login con google";
+      
+      message = " No terminaste de hacer el login con google";
        
     }
-    return { status: false, title: "Error", message };
+    return { status: false, title: "Error", message:""};
   }
 };
