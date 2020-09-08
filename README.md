@@ -22,6 +22,14 @@ H1: Yo como desarrollador quiero poderme loguear en la red social de desarrollad
 H2: Yo como desarrollador quiero poder hacer publicaciones en el muro de la red social.
 H3: Yo como desarrollador quiero poder dar y recibir likes en los post.
 
+## Prototipo de baja
+
+## Prototipo de alta
+
+Desko (https://www.figma.com/file/iCbkiRTP1h4rOpnPFsmony/Social-Network-TechMe?node-id=1%3A50)
+Movil (https://www.figma.com/file/iCbkiRTP1h4rOpnPFsmony/Social-Network-TechMe?node-id=0%3A1)
+Movil (https://www.figma.com/file/iCbkiRTP1h4rOpnPFsmony/Social-Network-TechMe?node-id=1%3A100)
+
 ### HTML y CSS
 
 * [x ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
