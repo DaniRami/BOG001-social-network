@@ -16,7 +16,7 @@ const auth = () => {
         return {
           signInWithPopup: (provider) => {
             return new Promise((resolve, reject) => {
-              if ({}) {
+              if (provider) {
                 setTimeout(() => {
                   resolve("ingresaste con google");
                 }, 3000);

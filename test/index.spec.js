@@ -40,8 +40,8 @@ describe("loginGoogle", () => {
   });
 
   it("deberia recibir un objeto de respuesta exitosa  del provaider al iniciar seccion con google", () => {
-    return loginGoogle().then((data) => {
-    expect(data).toEqual({});
+    return loginGoogle().then((provider) => {
+    expect(provider).toBe("ingresaste con google");
     });
   });
   it("deberia salir un error cuando no termino de hacer el login con google", () => {
