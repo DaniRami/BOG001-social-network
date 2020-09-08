@@ -1,5 +1,7 @@
 # TechMe
 
+<img src="src/img/Captura.PNG" width=200> 
+
 ## Investigacion de usuario
 Hicimos una encuesta virtual para conocer las expectativas y necesidades de nuestros potenciales usuarios con los siguientes hallazgos:
 
