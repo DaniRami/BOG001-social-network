@@ -12,12 +12,15 @@ Hicimos una encuesta virtual para conocer las expectativas y necesidades de nues
 
 4. Pudimos visualizar en la encuesta que nuestros usuarios expresan la necesidad de poder ver publicaciones de personas que no estuvieran siguiendo en la red social, con un porcentaje del 71.4% de los participantes.
 
-## Definición del producto
-Nuestro producto final será una red social de tecnología cuya finalidad es compartir iniciativas de proyectos, noticias, preguntas a la comunidad sobre código o conceptos e historia de la tecnología con datos curiosos.
-
 Link de Estadisticas de nuestra investigacion de usuario:
 
 (https://docs.google.com/forms/d/1AdlquL3H6ODTbu2L1OTn45QjNINwM3KZGgaMESAnU2o/edit#responses)
+
+
+## Definición del producto
+Nuestro producto final será una red social de tecnología cuya finalidad es compartir iniciativas de proyectos, noticias, preguntas a la comunidad sobre código o conceptos e historia de la tecnología con datos curiosos.
+
+ 
 
 ## Historias de usuario
 H1: Yo como desarrollador quiero poderme loguear en la red social de desarrolladores TechMe (quiero loguearme con correo y contraseña y con google).
