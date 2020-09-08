@@ -1,5 +1,5 @@
 
-## <img src="src/img/Captura.PNG" width=400> 
+## <img src="src/img/Captura.PNG" width=800> 
 
 ## Investigacion de usuario
 Hicimos una encuesta virtual para conocer las expectativas y necesidades de nuestros potenciales usuarios con los siguientes hallazgos:
