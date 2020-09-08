@@ -27,6 +27,11 @@ describe("loginWithEmail", () => {
       expect(error).toBe("contraseña incorrecta");
     });
   });
+  it("deberia dar un error para este contraseña", () => {
+    return loginWithEmail("sacha.@gmail.com").catch((error) => {
+      expect(error).toBe("este correo no esta registrado");
+    });
+  });
 });
 
 describe("loginGoogle", () => {
