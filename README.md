@@ -1,5 +1,4 @@
-
-                                            <img src="src/img/Captura.PNG" width=600> 
+## <img src="src/img/Captura.PNG" width=400> 
 
 ## Investigacion de usuario
 
