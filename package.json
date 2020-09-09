@@ -16,7 +16,7 @@
     "pretest": "npm run htmlhint && npm run eslint && npm run stylelint",
     "test": "jest --coverage",
     "start": "serve src/",
-    "deploy": "gh-pages -d src/main"
+    "deploy": "gh-pages -d src"
   },
   "Dependencies": {
     "@babel/core": "^7.2.2",
@@ -24,7 +24,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
     "eslint": "^6.0.1",
-    "gh-pages": "^2.1.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.1.2",
@@ -34,9 +33,7 @@
     "serve": "^11.0.2",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
-     
   },
-
   "directories": {
     "test": "test"
   },
@@ -48,5 +45,8 @@
   "bugs": {
     "url": "https://github.com/CaroSuarez/BOG001-social-network/issues"
   },
-  "homepage": "https://github.com/CaroSuarez/BOG001-social-network#readme"
+  "homepage": "https://github.com/CaroSuarez/BOG001-social-network#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
