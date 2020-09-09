@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap');
+
+
+
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, #root, body {
+    width: 100%;
+    height: 100%;
+    background-color: #3A2C65;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.box-register {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(20, 5%);
+    grid-template-columns: repeat(10, 10%);
+    grid-gap: 0px;
+    background-color: #3A2C65;
+}   
+
+.box-register-2, .box-register-3, .box-register-4 {
+    display: none;
+}
+
+.imgRegister {
+    display: none;
+}
+
+.techMeRegister{
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin: auto;
+}
+
+.welcomeTextRegister {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    margin: auto;
+    text-align: center;
+    color: #50C5B7;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    
+}
+
+.tech {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #F515E0;
+    font-size: 9vh;
+}
+
+.me {
+    font-family: 'Cabin Sketch';
+    color: #CBEF43;
+    font-size: 9vh;
+    font-family: Cabin Sketch;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.formRegister {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 7;
+    grid-row-end: 20;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    padding: 2%;   
+    justify-content: flex-start;
+    
+}
+
+.inputRegister {  
+    margin: 4%;
+    margin-bottom: 6%;
+    height: 8%;
+    font-family: 'Catamaran', sans-serif;
+    font-size: medium;
+    color: #C4C4C4;
+    background-color: #3A2C65;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    
+}
+
+.termsText {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 16;
+    grid-row-end: 18;
+    color: #C4C4C4;
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10% 0;
+    height: 25%;
+    
+    
+
+}
+
+#btnRegister {
+    
+    
+    height: 5vh;
+    font-family: 'Catamaran', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #A43A9A;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    color: #C4C4C4;
+    
+}
+
+
+@media screen and (min-width:800px){
+
+    .box-register {
+        display: grid;
+        grid-template-rows: repeat(20, 5%);
+        grid-template-columns: repeat(20, 5%);
+        
+    } 
+
+    .imgRegister {
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 10;
+        grid-row-start: 1;
+        grid-row-end: 21;
+        height: 100%;
+        
+    }
+
+    .box-register-2 {
+        display: block;
+        grid-column-start: 10;
+        grid-column-end: 21;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        background-color: #3A2C65;
+    }
+
+    .box-register-3 {
+        display: block;
+        grid-column-start: 9;
+        grid-column-end: 21;
+        grid-row-start: 6;
+        grid-row-end: 19;
+        background-color: #3A2C65;
+        border-radius: 5px;
+    }
+
+    .box-register-4 {
+        display: block;
+        grid-column-start: 10;
+        grid-column-end: 21;
+        grid-row-start: 19;
+        grid-row-end: 21;
+        background-color: #3A2C65;
+    }
+
+
+
+    .techMeRegister{
+        grid-column-start: 10;
+        grid-column-end: 20;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        
+    }
+    
+    .welcomeTextRegister {
+        grid-column-start: 10;
+        grid-column-end: 20;
+        grid-row-start: 5;
+        grid-row-end: 7;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+        
+        
+        
+    }
+        
+    .tech {
+        font-size: 10vh;
+    }
+    
+    .me {
+        font-size: 10vh;
+    }
+    
+    .formRegister {
+        grid-column-start: 10;
+        grid-column-end: 20;
+        grid-row-start: 7;
+        grid-row-end: 18;
+    }
+    
+    .inputRegister {  
+        margin: 2%;
+        margin-bottom: 0%;
+        height: 12%;
+        font-family: 'Catamaran', sans-serif;
+        font-size: medium;
+        color: #C4C4C4;
+        background-color: #3A2C65;
+        border: 1px solid #C4C4C4;
+        border-radius: 3px;
+        
+    }
+    
+    .termsText {
+        font-size: 18px;
+        padding: 5% 0;
+        height: 25%;
+        
+        
+    
+    }
+    
+    #btnRegister {
+        
+        
+        height: 5vh;
+        font-family: 'Catamaran', sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        background-color: #A43A9A;
+        border: 1px solid #C4C4C4;
+        border-radius: 3px;
+        color: #C4C4C4;
+        
+    }
+    
+
+
+
+
+
+}
