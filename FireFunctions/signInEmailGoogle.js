@@ -1,8 +1,7 @@
 export const loginWithEmail = async (email, password) => {
   try {
     await firebase.auth().signInWithEmailAndPassword(email, password);
-     return { title: "Bienvenido", message: "Ingresaste con correo eletronico" };
-     
+    return { title: "Bienvenido", message: "Ingresaste con correo eletronico" };
   } catch (error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -29,11 +28,15 @@ export const loginGoogle = async () => {
     var provider = await new firebase.auth.GoogleAuthProvider();
     provider.addScope("https://www.googleapis.com/auth/userinfo.email");
     await firebase.auth().signInWithPopup(provider);
-    var token = await provider.credential.accessToken;
-    var user =  await provider.user;
+    var token = provider.credential.accessToken;
+    var user = provider.user;
     console.log(user);
     console.log(token);
-    return {status: true, title: "Bienvenido", message: "Ingresaste con google"};
+    return {
+      status: true,
+      title: "Bienvenido",
+      message: "Ingresaste con google",
+    };
   } catch (error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -45,14 +48,10 @@ export const loginGoogle = async () => {
     console.log(credential);
 
     if (errorCode === "auth/account-exists-with-different-credential") {
-      
-      message = " ya te encuentras registado con correo eletronico";
-       
+      message = "Error ya te encuentras registado con correo eletronico";
     } else if (errorCode == "auth / popup-closed-by-user") {
-      
-      message = " No terminaste de hacer el login con google";
-       
+      message = "Error no terminaste de hacer el login con google";
     }
-    return { status: false, title: "Error", message:""};
+    return { status: false, title: "Error", message };
   }
 };
