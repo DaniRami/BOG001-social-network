@@ -32,7 +32,7 @@ export const router = async (route) => {
     
 
         default:
-            "404 "
+             
             break;
     }
 }
