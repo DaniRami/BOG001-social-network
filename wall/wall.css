@@ -8,28 +8,65 @@
   padding: 0;
 }
 
-.header,
-.footer {
+html,
+body,
+.wall-container,
+#root {
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: solid #e5e5e5;
-  border-width: 1px 1px;
-  padding: 10px;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.header {
+.wall-container {
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-template-rows: 20% 70% 10%;
+  height: 100%;
+  width: 100%;
 }
 
-.TechMewall {
-  display: inline-block;
-  text-align: left;
+.headerWall {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  grid-template-columns: repeat(5, 20%);
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  border: solid #e5e5e5;
+  border-width: 0.5px;
+  padding: 0;
+  height: 100%;
 }
+
+.mainWall {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.footerWall {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
+  height: 100%;
+}
+.TechMewall {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  margin-left: 24px;
+}
+
 .techwall {
   font-family: "Chakra Petch", sans-serif;
   color: #f515e0;
@@ -43,218 +80,320 @@
   font-style: normal;
   font-weight: normal;
 }
-.btnOutWall {
-  color: #cccccc;
-  background: #3a2c65;
-  text-decoration: none;
-  text-align: right;
-  font-family: "Catamaran", sans-serif;
-  font-style: normal;
-  font-size: 18px;
-}
 
 .btnWallWall {
-  color: #cccccc;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  color: #cbef43;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  font-family: "Catamaran", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  margin: auto;
+}
+
+.btnOutWall {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  color: #cbef43;
   background: #3a2c65;
   text-decoration: none;
-  text-align: right;
   font-family: "Catamaran", sans-serif;
+  font-size: 15px;
   font-style: normal;
-  font-size: 18px;
+  font-weight: bold;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  margin: auto;
 }
 
 .LINK {
-  margin-bottom: 15px;
-  border: 1px solid #cccccc;
+  display: flex;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  border: 0.5px solid #cccccc;
   border-radius: 0px;
   font-family: "Chakra Petch", sans-serif;
-  font-size: 14px;
 }
-.idea {
-  text-align: center;
+
+.ideaWall {
+  align-self: center;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
   color: #50c5b7;
   text-decoration-line: underline;
 }
+
 .box-post {
-  margin-bottom: 15px;
-  border: 1px solid #cccccc;
-  border-radius: 0px;
+  border-bottom: 0.5px solid #cccccc;
   background-color: #6e6095;
+  min-height: 100px;
+  width: 100%;
+
+  padding: 5px 15px;
+  box-sizing: border-box;
 }
-   
-.title {
-    color:  #50C5B7;
-    font-size: 16px;
-    font-family:  'Chakra Petch', sans-serif
-} 
-  
-  .Idea{
-    color:  #C4C4C4;
-    font-size: 12px;
-    font-family: "Catamaran", sans-serif; 
-  } 
-   .Fecha{
-    color:  #C4C4C4;
-    font-size: 10px;
-    font-family: "Catamaran", sans-serif; 
-    text-align: left;
-    margin-top: 0px;
-}   
 
+.headerPost {
+  box-sizing: border-box;
 
-.footer {
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.userNamePost {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #cbef43;
+  font-family: "Catamaran", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  align-self: flex-end;
+  height: fit-content;
+}
+
+.Fecha {
+  color: #c4c4c4;
+  font-size: 10px;
+  font-family: "Catamaran", sans-serif;
+  margin: 0;
+  padding: 0;
+  align-self: flex-end;
+  height: fit-content;
+}
+
+.mainPost {
+  padding: 5px 10px;
+  min-height: 50px;
+}
+
+.mainPost h2 {
+  text-align: left;
+  font-size: 12px;
+  font-family: Chakra Petch;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0;
+  color: #c4c4c4;
+}
+
+.footerPost {
+  padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-rows: 3fr 1fr;
-  text-align: center;
-  align-items: center;
-  font-size: 14px;
+  grid-template-columns: repeat(10, 10%);
+  align-items: flex-end;
+  height: 25px;
+  width: 100%;
 }
+
+.likesCount {
+  grid-column-start: 9;
+  grid-column-end: 10;
+  font-size: 12px;
+  height: fit-content;
+  width: fit-content;
+  font-family: "Catamaran", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  color: #cbef43;
+  justify-self: end;
+  width: fit-content;
+  height: fit-content;
+  margin: auto 0;
+}
+
+.heartWall {
+  grid-column-start: 10;
+  grid-column-end: 11;
+  height: 20px;
+  margin: auto;
+  background-color: #6e6095;
+  color: #6e6095;
+  border: none;
+}
+
+.title {
+  grid-column-start: 10;
+  grid-column-end: 20;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  color: #50c5b7;
+  font-size: 16px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.Idea {
+  grid-column-start: 2;
+  grid-column-end: 19;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  color: #c4c4c4;
+  font-size: 14px;
+  font-family: "Catamaran", sans-serif;
+}
+
 .nombres {
   color: #cccccc;
   font-family: "Catamaran", sans-serif;
-  font-size: 12px;
+  font-size: 8px;
 }
 
 .icon {
   padding: 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 0;
+  height: fit-content;
 }
 
 .git {
-  width: 32%;
-  height: 54px;
-  margin-left: -30px
+  height: 35px;
+  box-sizing: border-box;
 }
 
 .jest {
-  width: 643%;
-  height: 48px;
-  margin-top: 6px;
-  margin-left: -133px; 
-     
+  height: 35px;
+  box-sizing: border-box;
 }
-
-
-
 
 .mdn {
-  width: 163%;
-  height: 70px;
-  margin-top: -4px;
-  margin-left: -95px;
-  padding: 3px;
+  height: 35px;
+  box-sizing: border-box;
 }
- 
 
 
-@media screen and (min-width: 740px) {
-  .header,
-  .footer {
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: solid #e5e5e5;
-    border-width: 1px 1px;
-    align-items: center;
-    text-align: center;
-  }
 
-  .header {
+@media screen and (min-width: 768px) {
+
+  .headerWall {
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr;
-    grid-gap: 15px;
+    grid-template-columns: repeat(10, 10%);
+    
   }
 
-  .TechMewall {
-    display: inline-block;
-    text-align: left;
-  }
   .techwall {
-    font-family: "Chakra Petch", sans-serif;
-    color: #f515e0;
     font-size: 8vh;
   }
 
-  .Mewall {
-    font-family: "Cabin Sketch";
-    color: #cbef43;
+  .Mewall {   
     font-size: 8vh;
-    font-style: normal;
-    font-weight: normal;
   }
+  
   .btnOutWall {
-    color: #cccccc;
-    background: #3a2c65;
-    text-decoration: none;
-    text-align: right;
-    font-family: "Catamaran", sans-serif;
-    font-style: normal;
-    font-size: 5vw;
+    grid-column-start: 10;
+    grid-column-end: 11;
+    font-size: 25px;
   }
 
   .btnWallWall {
-    color: #cccccc;
-    background: #3a2c65;
-    text-decoration: none;
-    text-align: right;
-    font-family: "Catamaran", sans-serif;
-    font-style: normal;
-    font-size: 5vw;
+    grid-column-start: 9;
+    grid-column-end: 10;   
+    font-size: 25px;
   }
 
   .LINK {
     border: 1px solid #cccccc;
     border-radius: 0px;
     font-family: "Chakra Petch", sans-serif;
-    font-size: 4vw;
+    font-size: 22px;
   }
-  .idea {
-    text-align: center;
-    color: #50c5b7;
-    text-decoration-line: underline;
+
+  .box-post {
+    min-height: 110px;
+    padding: 15px 20px;
   }
-   
+ 
+  .mainPost {
+    padding: 10px 15px;
+    min-height: 50px; 
+  }
+
+  .Fecha {   
+    font-size: 15px;   
+  }
+
+ .userNamePost {
+    font-size: larger;
+  }
+
+  .mainPost h2 {
+    font-size: large;
+  }
+
+  .footerPost {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(40, 2.5%);
+    align-items: flex-end;
+    height: 35px;
+    width: 100%;
+  
+  }
+
+
+  .likesCount {
+    grid-column-start: 39;
+    grid-column-end: 40;
+    font-size: 15px;  
+  }
+  
+  .heartWall {
+    grid-column-start: 40;
+    grid-column-end: 41;
+    height: 25px;
+    }
+  
+
   .footer {
     display: grid;
     grid-template-rows: 1fr 1fr;
     text-align: center;
     align-items: center;
-    font-size: 3vw;
   }
   .nombres {
     color: #cccccc;
     font-family: "Catamaran", sans-serif;
-    font-size: 3vw;
+    font-size: 15px;
+    
   }
 
   .icon {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(25, 4%);
   }
-  .git {
-    width: 32%;
-    height: 54px;
-    
+
+  #git {
+    grid-column-start: 12;
+    grid-column-end: 13;   
   }
-  
-  .jest {
-    width: 643%;
-    height: 48px;
-    margin-top: 6px;
-     
-       
+
+  #jest {
+    grid-column-start: 13;
+    grid-column-end: 14;   
   }
-  
-  
-  
-  
-  .mdn {
-    width: 163%;
-    height: 70px;
-    margin-top: -4px;
-     
-    padding: 3px;
+
+  #mdn {
+    grid-column-start: 14;
+    grid-column-end: 15;  
   }
 }

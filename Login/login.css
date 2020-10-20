@@ -11,6 +11,8 @@ body {
   text-align: center;
   height: 100%;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
   background-color: #3a2c65;
 }
 
@@ -110,9 +112,9 @@ form {
   margin-bottom: 8%;
   font-family: "Catamaran", sans-serif;
   font-size: medium;
-  color: white;
+  color:  #C4C4C4;
   background-color: #3a2c65;
-  border: 1px solid white;
+  border: 1px solid  #C4C4C4;
   border-radius: 3px;
   padding: 4.5px;
 }
@@ -181,7 +183,8 @@ form {
 
 .Img {
   z-index: 0;
-  position: absolute;
+  object-fit: cover;
+  object-position: center;
   bottom: 0px;
   left: 0px;
   right: 0px;
@@ -274,7 +277,7 @@ form {
     grid-column-start: 10;
     grid-column-end: 20;
     grid-row-start: 8;
-    grid-row-end: 19;
+    grid-row-end: 17;
     flex-direction: column;
     border: 1px solid white;
     border-radius: 3px;
@@ -284,7 +287,7 @@ form {
     margin-top: 10px;
     margin-left: -24px;
     margin-right: -22px;
-    padding: 40px;
+    padding: 53px;
   
   }
 
@@ -315,15 +318,15 @@ form {
   
   .InputLogin {
     margin: 2%;
-    margin-bottom: 0%;
+    margin-bottom: 2%;
     height: 12%;
     font-family: 'Catamaran', sans-serif;
-    font-size: large;
+    font-size: 20px;
     color: #C4C4C4;
     background-color: #3A2C65;
     border: 1px solid #C4C4C4;
     border-radius: 3px;
-    padding: 14px;
+    padding: 11px;
     line-height: 1.1;
     
 
@@ -360,7 +363,7 @@ form {
   }
   
   .loginButton {
-    width: 22vw;
+    width: 17vw;
     height: auto;
     font-family: "Catamaran", sans-serif;
     text-align: center;
@@ -371,7 +374,7 @@ form {
     border-radius: 3px;
     color: #c4c4c4;
     margin-left: 3%;
-    margin-top: 27px;
+    margin-top: 4px;
   }
   
   .btn2 {
@@ -390,7 +393,7 @@ form {
     z-index: 0;
     position: absolute;
     object-fit: cover;
-    object-position: 45% -1px;
+    object-position: 53% -1px;
     bottom: 0px;
     left: 0px;
     right: 0px;

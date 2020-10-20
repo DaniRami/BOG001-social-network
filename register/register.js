@@ -15,8 +15,6 @@ export const userRegister = async (event) => {
 export const registerView = { 
 
   render: async ()=> {
-      let root = document.getElementById("root");
-      root.innerHTML = '';
       const view =
      `
      
@@ -55,6 +53,7 @@ export const registerView = {
   afterRender: ()=> {
       let btnRegister = document.getElementById("btnRegister");
       btnRegister.addEventListener("click", userRegister);
+      
 
       
     }  

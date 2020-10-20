@@ -1,40 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
 
 .modal {
-  
-  display: none; 
-  position: fixed; 
+  display: none;
+  position: fixed;
   z-index: 3;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color:  rgba(48, 46, 47, 0.5);
+  overflow: auto;
+  background-color: rgba(48, 46, 47, 0.5);
 }
 
-  .modal-content {
-    margin: auto;
-    width: 87%;
-    height: 22%;
-    color: #D6D3D3;
-    text-align: center;
-    background-color: #3A2C65;
-    border: 1px solid #C4C4C4;
-    border-width: 1px 1px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0   rgba(241, 228, 238, 0.2),0 6px 20px 0   rgba(241, 228, 238, 0.2);
-  }
+.modal-content {
+  margin: auto;
+  width: 87%;
+  height: 22%;
+  color: #d6d3d3;
+  text-align: center;
+  background-color: #3a2c65;
+  border: 1px solid #c4c4c4;
+  border-width: 1px 1px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(241, 228, 238, 0.2),
+    0 6px 20px 0 rgba(241, 228, 238, 0.2);
+}
 
 /* The Close Button */
 .close {
-  color: #D6D3D3;
+  color: #d6d3d3;
   font-size: 28px;
-   
 }
 
-.close:hover, .close:focus {
-  color:  #77136f;
+.close:hover,
+.close:focus {
+  color: #77136f;
   text-decoration: none;
   cursor: pointer;
 }
@@ -44,146 +44,148 @@
   margin-bottom: 0px;
   grid-template-columns: 10fr 1fr;
   grid-gap: 0;
-  background-color:#A43A9A;
-  border: 1px solid #C4C4C4;
+  background-color: #a43a9a;
+  border: 1px solid #c4c4c4;
   border-width: 1px 1px;
   border-radius: 3px;
   width: 100%;
   height: 30%;
 }
 
-.modal-header h2{
-  font-family: 'Chakra Petch', sans-serif;
+.modal-header h2 {
+  font-family: "Chakra Petch", sans-serif;
   font-size: 20px;
   margin: auto;
   padding-left: 12%;
 }
 
-.modal-body, #contentElement {
+.modal-body,
+#contentElement {
   display: grid;
   grid-gap: 15px;
   padding: 10px;
 }
 
-
-#contentElement section{
+#contentElement section {
   display: grid;
   grid-template-rows: 2fr;
   text-align: center;
   align-items: center;
-  
 }
 
- h3{
-  font-family: 'Chakra Petch', sans-serif;
+h3 {
+  font-family: "Chakra Petch", sans-serif;
   font-size: 18px;
   margin-top: 5%;
   margin-bottom: 15%;
-  
 }
 /* post */
 
 .Inputtexto {
-background-color: #3a2c65;
-border: 1px solid rgba(0, 0, 0, .0);
-color:#D6D3D3;
-font-family: "Catamaran", sans-serif;
+  background-color: #3a2c65;
+  color: #d6d3d3;
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  height: 196px;
+  width: 100%;
+  text-align: center;
 }
 
-.Inputtitle{
-background-color : #3a2c65;
-border: 1px solid rgba(0, 0, 0, .0);
-padding: 9.5px;
-font-family: "Catamaran", sans-serif;
+.btnsave {
+  background-color: #a43a9a;
+  border: 1px solid #d6d3d3;
+  color: #d6d3d3;
+  font-family: "Chakra Petch", sans-serif;
+  margin-top: 17px;
+  width: 171px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.btnsave{
-background-color : #A43A9A;
-border: 1px solid  white;
-color: #D6D3D3;
-font-family: 'Chakra Petch', sans-serif;
+.ModalContent {
+  width: 71%;
+  height: 321px;
 }
 
-.formModal{
-width: 100%;
-height: 100%;
+.headerPublicacion {
+  width: 100%;
+  height: 40px;
 }
 
+.modalPubicacion {
+  width: 100%;
+  height: 300px;
+}
 
-
-
-
-@media  screen and  (min-width: 740px) {   
-   
+@media screen and (min-width: 740px) {
   .modal {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     z-index: 3;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgba(48, 46, 47, 0.5);
   }
 
-
   .modal-content {
     margin: auto;
-  width: 47%;
-  height: 22%;
-  text-align: center;
-  color: #D6D3D3;
-  background-color: #3A2C65;
-  border: 0.1vw solid #C4C4C4;
-  border-width: 2px 2px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(241, 228, 238, 0.3), 0 6px 20px 0 rgba(241, 228, 238, 0.3);
+    width: 47%;
+    height: 22%;
+    text-align: center;
+    color: #d6d3d3;
+    background-color: #3a2c65;
+    border: 0.1vw solid #c4c4c4;
+    border-width: 2px 2px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(241, 228, 238, 0.3),
+      0 6px 20px 0 rgba(241, 228, 238, 0.3);
   }
-  
-  
+
   .close {
-    color: #D6D3D3;
+    color: #d6d3d3;
     font-size: 4vh;
-    
   }
-  
-  .close:hover, .close:focus {
-    color:  #77136f;
+
+  .close:hover,
+  .close:focus {
+    color: #77136f;
     text-decoration: none;
     cursor: pointer;
   }
 
-  .modal-header h2{
-    font-family: 'Chakra Petch', sans-serif;
+  .modal-header h2 {
+    font-family: "Chakra Petch", sans-serif;
     font-size: 3.5vh;
     padding-left: 14%;
-}
-    
-  
+  }
 
   .modal-header {
     display: grid;
     margin: auto;
     grid-template-columns: 10fr 1fr;
     grid-gap: 0;
-    background-color:#A43A9A;
-    border: 0.0vw solid #C4C4C4;
+    background-color: #a43a9a;
+    border: 0vw solid #c4c4c4;
     border-width: 2px 2px;
     border-radius: 4px;
     width: 100%;
-    height: 30%; 
-     
+    height: 30%;
   }
-   
-  #contentElement section{
+
+  #contentElement section {
     display: grid;
     grid-template-rows: 2fr;
     text-align: center;
     align-items: center;
-    
   }
- .modal-body {
+  .modal-body {
     display: grid;
     padding: 10px;
     max-width: 800px;
@@ -191,10 +193,54 @@ height: 100%;
     grid-template-rows: 3fr;
     margin: auto;
   }
-  h3{
-    font-family: 'Chakra Petch', sans-serif;
+  h3 {
+    font-family: "Chakra Petch", sans-serif;
     font-size: 3vh;
     margin-top: 20px;
   }
-  
+
+  /* post */
+
+  .Inputtexto {
+    background-color: #3a2c65;
+    color: #d6d3d3;
+    font-family: "Catamaran", sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin-right: 0px;
+    border: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    margin-top: -16px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+
+  .btnsave {
+    background-color: #a43a9a;
+    border: 1px solid #d6d3d3;
+    color: #d6d3d3;
+    font-family: "Chakra Petch", sans-serif;
+    margin-top: 65px;
+    width: 251px;
+    height: 39px;
+    font-size: 24px;
+  }
+
+  .ModalContent {
+    width: 339px;
+    height: 501px;
+  }
+
+  .headerPublicacion {
+    width: 100%;
+    height: 65px;
+  }
+
+  .modalPubicacion {
+    display: inline-block;
+    padding: 3px;
+  }
 }

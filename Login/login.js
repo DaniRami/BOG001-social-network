@@ -1,14 +1,10 @@
 import { watcher } from "../FireFunctions/signOut.js";
-import {
-  loginGoogle,
-  loginWithEmail,
-} from "../FireFunctions/signInEmailGoogle.js";
+import {loginGoogle,loginWithEmail} from "../FireFunctions/signInEmailGoogle.js";
 import { router } from "../router.js";
 import { loadModal, closeModal } from "../component/modal.js";
 
 export const LoginWithEmailAndPassword = async (event) => {
   event.preventDefault();
-  
   let loginEmail = document.getElementById("emailLogin").value;
   let loginPass = document.getElementById("passLogin").value;
   let statusLogin = await loginWithEmail(loginEmail, loginPass);
@@ -16,7 +12,8 @@ export const LoginWithEmailAndPassword = async (event) => {
 
   if (statusLogin.title === "Bienvenido") {
     await watcher();
-    await router("#/wall");
+    history.pushState("#wall", "", "#wall")    
+    router("#wall");
   } else {
     console.error("error");
   }
@@ -28,15 +25,15 @@ const googleWallLogin = async (event) => {
   loadModal(statusGoogle.title, statusGoogle.message);
   if (statusGoogle.status === true) {
     await watcher();
-    await router("#/wall");
+    await router("#wall");
   } else {
     console.error("error");
   }
 };
 
 export const RedirectToRegister = () => {
-  window.location.hash = "#/register";
-  router("#/register");
+  history.pushState("#register", "", "#register");
+  router("#register"); 
 };
 
 export const loginComponent = {
@@ -60,7 +57,12 @@ export const loginComponent = {
       </form>
       </div>
       <div class = "actionsLogin">
-      <a href= "#/register" class="btn2"  type= "button"  id="userRegister">crear tu cuenta</a>
+
+
+      <a class="btn2"  type= "button"  id="userRegister">crear tu cuenta</a>
+
+
+
       <input type="button" class="loginButton" id="loginButton" value="ENTRAR"/>
       </div> 
       </div>
@@ -69,6 +71,7 @@ export const loginComponent = {
         `;
     return view;
   },
+  
   afterRender: async () => {
     let loginGoogleItem = document.getElementById("loginGoogleid");
     loginGoogleItem.addEventListener("click", googleWallLogin);
