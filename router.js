@@ -32,7 +32,8 @@ export const router = async (route) => {
     
 
         default:
-             
+            content.innerHTML = await loginComponent.render();
+            loginComponent.afterRender();
             break;
     }
 }
