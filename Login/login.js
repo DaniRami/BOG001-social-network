@@ -1,7 +1,7 @@
 import { watcher } from "../FireFunctions/signOut.js";
 import {loginGoogle,loginWithEmail} from "../FireFunctions/signInEmailGoogle.js";
 import { router } from "../router.js";
-import { loadModal, closeModal } from "../component/modal.js";
+import { loadModal} from "../component/modal.js";
 
 export const LoginWithEmailAndPassword = async (event) => {
   event.preventDefault();
@@ -20,7 +20,7 @@ export const LoginWithEmailAndPassword = async (event) => {
 };
 
 const googleWallLogin = async (event) => {
-  event.preventDefault();
+  event.preventDefault(); 
   let statusGoogle = await loginGoogle();
   loadModal(statusGoogle.title, statusGoogle.message);
   if (statusGoogle.status === true) {
