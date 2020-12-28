@@ -10,17 +10,17 @@ export const router = async (route) => {
 
         case "#register":         
             content.innerHTML= await registerView.render();
-            registerView.afterRender();
+           await registerView.afterRender();
             break;
         
         case "#login":
             content.innerHTML = await loginComponent.render();
-            loginComponent.afterRender();
+           await loginComponent.afterRender();
             break;
         
         case "#wall":
             content.innerHTML = await  wallView.render();
-            wallView.afterRender();
+           await wallView.afterRender();
             loadPost();
             break;
 
@@ -32,9 +32,7 @@ export const router = async (route) => {
     
 
         default:
-            content.innerHTML = await loginComponent.render();
-            loginComponent.afterRender();
-            break;
+           break;
     }
 }
     
